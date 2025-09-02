@@ -1,18 +1,17 @@
 let $ = document;
 
-let header_icon = $.querySelector(".header_icon");
-let header_icon_i = $.querySelector(".header_icon i");
-const nav = $.querySelector(".nav");
-let nav_bar_menu = $.querySelector(".nav_bar_menu");
+let hamburgerMenu = $.querySelector(".hamburger-menu");
+let hamburgerMenu_i_Element = $.querySelector(".hamburger-menu i");
+const nav = $.querySelector(".nav-menu");
+let nav_bar_menu = $.querySelector(".options-bar");
 let nav_logo = $.querySelector(".nav-logo");
-const menu = document.querySelector(".menu"); // باکس شما
+const menu = document.querySelector(".main-menu");
 let isInTemporaryParent;
 
-// ریسپانسیو منو
+// Responsive Menu
 $.addEventListener("DOMContentLoaded", function () {
   isInTemporaryParent = menu.parentElement === nav_bar_menu;
 
-  // تابع اصلی
   function moveBoxBasedOnWidth() {
     if (window.innerWidth < 769) {
       if (!isInTemporaryParent) {
@@ -34,10 +33,9 @@ $.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // اجرای اولیه
   moveBoxBasedOnWidth();
 
-  // استفاده از requestAnimationFrame برای resize
+  // Using requestAnimationFrame to resize
   let resizeTimeout;
   window.addEventListener("resize", function () {
     clearTimeout(resizeTimeout);
@@ -45,12 +43,13 @@ $.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-header_icon.addEventListener("click", () => {
-  if (header_icon_i.classList.contains("fa-bars")) {
+// Hamburger menu
+hamburgerMenu.addEventListener("click", () => {
+  if (hamburgerMenu_i_Element.classList.contains("fa-bars")) {
     nav_bar_menu.style.left = "0";
-    header_icon_i.classList = "fa fa-times";
-  } else if (header_icon_i.classList.contains("fa-times")) {
+    hamburgerMenu_i_Element.classList = "fa fa-times";
+  } else if (hamburgerMenu_i_Element.classList.contains("fa-times")) {
     nav_bar_menu.style.left = "-256px";
-    header_icon_i.classList = "fa fa-bars";
+    hamburgerMenu_i_Element.classList = "fa fa-bars";
   }
 });
