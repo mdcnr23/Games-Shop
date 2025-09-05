@@ -409,31 +409,32 @@ template {
 
 /* headerBottom(Large cover under the menu) */
 
-.header_content__wrapper {
+.header_cover__wrapper {
   position: relative;
 }
-.text_wrapper_header {
+.caption-wrapper_cover {
   position: absolute;
   width: 70%;
   display: flex;
   flex-direction: column;
   bottom: 5rem;
   left: 2rem;
-  color: white; /* برای خوانایی روی پس‌زمینه تیره */
-  text-shadow: 0 1px 3px rgb(0, 0, 0); /* سایه ملایم برای متن */
+  color: white; /* For readability of text on a dark background */
+  text-shadow: 0 1px 3px rgb(0, 0, 0); /* Soft shadow for text */
 }
-.header_title {
+.cover-title {
   width: 100%;
 }
-.header_description__container {
-}
-.header_description {
+
+.description-cover {
   font-size: 1.2rem;
 }
-.container_cover {
+
+.img-cover_wrapper {
   width: 100%;
 }
-.container_cover::after {
+
+.img-cover_wrapper::after {
   content: "";
   position: absolute;
   bottom: 3px;
@@ -443,7 +444,8 @@ template {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
   pointer-events: none;
 }
-.header_cover {
+
+.img-cover {
   width: 100%;
 }
 
@@ -454,7 +456,7 @@ template {
 
 /* header content features */
 
-.features {
+.feature-section {
   margin-top: 2rem;
   width: 100%;
   display: flex;
@@ -462,7 +464,7 @@ template {
   justify-content: space-around;
 }
 
-.box {
+.feature-box {
   display: flex;
   align-items: center;
   position: relative;
@@ -482,7 +484,8 @@ template {
   position: relative;
 }
 
-.box > .title_box_features {
+/* For box animations */
+.feature-box > .title_box_features {
   position: absolute;
   top: 7px;
   right: 10px;
@@ -490,7 +493,7 @@ template {
   font-size: 1.1rem;
 }
 
-.box > .text_box_features {
+.feature-box > .text_box_features {
   position: absolute;
   bottom: 7px;
   right: 10px;
@@ -498,25 +501,24 @@ template {
   font-size: 1.1rem;
 }
 
-.box::before,
-.box::after,
-.box > .border-left,
-.box > .border-right {
+.feature-box::before,
+.feature-box::after,
+.feature-box > .border-left,
+.feature-box > .border-right {
   content: "";
   position: absolute;
-  background: #000; /* رنگ border */
+  background: #000;
 }
 
-.box::before {
+.feature-box::before {
   top: -0.5px;
   left: 0;
-  /* ضخامت border */
   width: 100%;
   height: 2px;
-  transform: translateX(-100%); /* مخفی کردن اولیه */
+  transform: translateX(-100%);
 }
 
-.box::after {
+.feature-box::after {
   bottom: 0;
   left: 0;
   width: 100%;
@@ -524,7 +526,7 @@ template {
   transform: translateX(100%); /* مخفی کردن اولیه */
 }
 
-.box > .border-left {
+.feature-box > .border-left {
   top: 0;
   left: 0;
   width: 2px; /* ضخامت border */
@@ -532,7 +534,7 @@ template {
   transform: translateY(-100%); /* مخفی کردن اولیه */
 }
 
-.box > .border-right {
+.feature-box > .border-right {
   top: 0;
   right: 0;
   width: 2px; /* ضخامت border */
@@ -540,19 +542,19 @@ template {
   transform: translateY(100%); /* مخفی کردن اولیه */
 }
 
-.box:hover::before {
+.feature-box:hover::before {
   animation: rotateBorderTop 1s ease-in-out;
 }
 
-.box:hover::after {
+.feature-box:hover::after {
   animation: rotateBorderBottom 1s ease-in-out;
 }
 
-.box:hover > .border-left {
+.feature-box:hover > .border-left {
   animation: rotateBorderLeft 1s ease-in-out;
 }
 
-.box:hover > .border-right {
+.feature-box:hover > .border-right {
   animation: rotateBorderRight 1s ease-in-out;
 }
 
@@ -628,29 +630,29 @@ template {
   }
 }
 
-.text_features__wrapper {
+/* .text_features__wrapper {
   display: flex;
   height: fit-content;
   flex-direction: column;
   text-align: end;
-  width: 9rem;
+  width: 20rem;
 }
 
 .title_features {
   height: fit-content;
-}
+} */
 
-.icon_h1 {
+.show-icon {
   margin-left: 2rem;
 }
 
-.text_features {
+/* .text_features {
   height: fit-content;
-}
+} */
 
 /* Showcase */
 
-.special_offers__container {
+.specialOffers-section {
   display: flex;
   margin-top: 2rem;
   width: 100%;
@@ -658,16 +660,13 @@ template {
   justify-content: center;
 }
 
-.special_offers__title__wrapper {
+.specialOffers-title__box {
   display: flex;
   margin-top: 2rem;
   justify-content: center;
 }
 
-.special_offers__title {
-}
-
-.special_offers_box__container {
+.specialOffers-box__container {
   position: relative;
   display: flex;
   left: 0.5rem;
@@ -676,7 +675,7 @@ template {
   justify-content: space-around;
 }
 
-.special_offers_box {
+.offers-box {
   position: relative;
   margin-bottom: 2rem;
   margin-right: 0.5rem;
@@ -684,19 +683,13 @@ template {
   height: 39rem;
 }
 
-.special_offers_img {
+.offer-img {
   width: 22rem;
   height: 22rem;
   border-radius: 0.5rem;
 }
 
-.title_special__offers {
-}
-
-.description_special__offers {
-}
-
-.special_offers_box > .see_more__btn {
+.offers-box > .see_more__btn {
   display: flex;
   position: absolute;
   width: 4rem;
@@ -999,8 +992,7 @@ template {
   height: 7rem;
   background-color: #b3be13;
 }
-.icon_h1 {
-}
+
 .text_support__wrapper {
   display: flex;
   justify-content: left;
@@ -1177,12 +1169,10 @@ template {
     width: 28rem;
     padding-left: 2.5rem;
   }
-  .text_wrapper_header {
+  .caption-wrapper_cover {
     bottom: 2rem;
   }
-  .header_description {
-  }
-  .header_title {
+  .cover-title {
     font-weight: normal;
     font-size: 27px;
   }
@@ -1198,10 +1188,10 @@ template {
   }
 
   /* features box */
-  .features {
+  .feature-section {
     width: 100%;
   }
-  .box {
+  .feature-box {
     width: 20%;
     height: 4.5rem;
   }
@@ -1274,13 +1264,13 @@ template {
     width: 20rem;
     padding-left: 2.5rem;
   }
-  .header_description {
+  .description-cover {
     display: none;
   }
-  .text_wrapper_header {
+  .caption-wrapper_cover {
     width: 90%;
   }
-  .header_title {
+  .cover-title {
     font-weight: normal;
     font-size: 27px;
     width: 100%;
@@ -1327,17 +1317,17 @@ template {
   }
 
   /* features box */
-  .box {
+  .feature-box {
     width: 10.5rem;
     height: 4.5rem;
   }
-  .box > .title_box_features {
+  .feature-box > .title_box_features {
     font-size: 1rem;
   }
-  .box > .text_box_features {
+  .feature-box > .text_box_features {
     font-size: 1rem;
   }
-  .icon_h1 {
+  .show-icon {
     position: relative;
     right: 1rem;
     font-size: 1.5rem;
@@ -1406,7 +1396,7 @@ template {
   .hamburger-menu i {
     transition: 0.5s all;
   }
-  .text_wrapper_header {
+  .caption-wrapper_cover {
     bottom: 1rem;
   }
   .header_title__container {
@@ -1414,9 +1404,7 @@ template {
     width: 45%;
     padding-left: 2.5rem;
   }
-  .header_description {
-  }
-  .header_title {
+  .cover-title {
     font-weight: normal;
     font-size: 22px;
   }
@@ -1475,31 +1463,29 @@ template {
   }
 
   /* features box */
-  .box {
+  .feature-box {
     width: 23.5%;
     height: 4rem;
   }
-  .box > .title_box_features {
+  .feature-box > .title_box_features {
     font-size: 0.9rem;
   }
-  .box > .text_box_features {
+  .feature-box > .text_box_features {
     font-size: 0.9rem;
   }
-  .icon_h1 {
+  .show-icon {
     position: relative;
     right: 1rem;
     font-size: 1.3rem;
   }
 
-  .special_offers__container {
-  }
-  .special_offers_box {
+  .offers-box {
     position: relative;
     margin-right: 0.5rem;
     width: 28rem;
     height: 39rem;
   }
-  .special_offers_img {
+  .offer-img {
     width: 100%;
     height: 27rem;
   }
@@ -1641,41 +1627,39 @@ template {
   .container {
     max-width: 100%;
   }
-  .header_title {
+  .cover-title {
     font-weight: normal;
     font-size: 20px;
   }
 
   /* features box */
-  .features {
+  .feature-section {
     flex-wrap: wrap;
   }
-  .box {
+  .feature-box {
     width: 9rem;
     height: 4.5rem;
     margin-right: 0.5rem;
     margin-bottom: 1.5rem;
   }
-  .box > .title_box_features {
+  .feature-box > .title_box_features {
     font-size: 1rem;
   }
-  .box > .text_box_features {
+  .feature-box > .text_box_features {
     font-size: 1rem;
   }
-  .icon_h1 {
+  .show-icon {
     position: relative;
     right: 1rem;
     font-size: 1.7rem;
   }
 
-  .special_offers__container {
-  }
-  .special_offers_box {
+  .offers-box {
     width: 18rem;
     height: 32rem;
     margin-right: 0.5rem;
   }
-  .special_offers_img {
+  .offer-img {
     width: 18rem;
     height: 18rem;
   }
