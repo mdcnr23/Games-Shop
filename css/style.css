@@ -353,7 +353,6 @@ template {
 
 /* Normalize css */
 
-
 .container {
   width: 95%;
   margin-right: auto;
@@ -705,22 +704,20 @@ template {
 }
 
 /* property */
-.property_store__container {
+.property-store__section {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   padding: 0;
 }
-.title_property_box {
+.title-property__div {
   text-align: center;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
-.title_property {
-}
 
-.container_property__boxes {
+.container-property {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -737,15 +734,9 @@ template {
   height: 13rem;
   font-size: 17px;
 }
-.icon_property {
-}
-.text_wrapper__property {
-}
-.text_property {
-}
 
 /* warranty */
-.warranty_container {
+.warranty-section {
   display: flex;
   margin-top: 5rem;
   width: 100%;
@@ -753,24 +744,24 @@ template {
   color: aliceblue;
 }
 
-.caption_warranty_container {
+.caption-warranty_wrapper {
   position: absolute;
   width: 35%;
   margin: 3rem 6rem;
 }
 
-.back_ground_warranty__container {
+.bg-warranty_container {
   width: 100%;
   filter: brightness(50%);
 }
 
-.caption_warranty {
+.caption-warranty {
   text-shadow: 0 1px 3px rgb(0, 0, 0); /* سایه ملایم برای متن */
   font-size: 1.2rem;
 }
 
-.see_more_warranty__btn,
-.see_more_warranty__btn_ {
+.warranty-btn,
+.warranty-btn2 {
   position: absolute;
   color: aliceblue;
   text-decoration: none;
@@ -778,16 +769,16 @@ template {
   background-color: hsla(0, 100%, 50%, 0.315);
   border-radius: 0.5rem;
 }
-.see_more_warranty__btn_ {
+.warranty-btn2 {
   margin-left: 12rem;
 }
-.see_more_warranty__btn,
-.see_more_warranty__btn_:hover {
+.warranty-btn,
+.warranty-btn2:hover {
   cursor: pointer;
 }
 
 /* Benefits of buying a console from us */
-.console_container {
+.console-section {
   display: flex;
   align-items: center;
   padding: 5rem 0;
@@ -795,7 +786,7 @@ template {
   flex-direction: column;
 }
 
-.console_title__container {
+.console-title__box {
   text-align: center;
   margin-bottom: 3rem;
   width: 100%;
@@ -805,31 +796,31 @@ template {
 .console_title {
 }
 
-.console_box_container {
+.console-feature__container {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-around;
 }
 
-.console_box {
+.console-box {
   text-align: center;
   width: 21rem;
   margin-left: 0.5rem;
 }
 
-.console_cover {
+.console-img__box {
   width: 21rem;
   height: 40rem;
 }
 
-.caption_consoles {
+.console-caption__box {
   font-size: 19px;
   line-height: 1.6rem;
 }
 
 /* trust us(comments) */
-.person_comments {
+.person-comments__section {
   position: relative;
   width: 100%;
   padding: 2rem 0;
@@ -837,24 +828,24 @@ template {
   color: aliceblue;
 }
 
-.person_comment_title {
+.person-comment__titleBox {
   text-align: center;
   align-self: center;
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
 
-.person_comments_title {
+.person-comment_title {
   font-size: 33px;
 }
-.person_comments_text {
+.person-comment__miniTitle {
   font-size: 20px;
   margin: 0 auto;
   line-height: 1.8rem;
 }
 
 /* boxes */
-.comments {
+.comments-wrapper {
   display: flex;
   margin-bottom: 6rem;
   justify-content: space-evenly;
@@ -871,15 +862,15 @@ template {
   border-radius: 0.2rem;
   background-color: #ffffff;
 }
-.comment_content {
+.comment-content {
 }
-.comment_body {
+.comment-body {
   padding-bottom: 2rem;
   font-size: 15.9px;
   line-height: 1.35rem;
   color: #575757;
 }
-.comment_info {
+.comment-info {
   display: flex;
   align-items: center;
   justify-content: left;
@@ -888,61 +879,58 @@ template {
   padding-bottom: 0.4rem;
   color: #000;
 }
-.comment_img {
+.person-profile {
   width: 2.5rem;
   margin-right: 1rem;
   height: fit-content;
   border-radius: 50%;
 }
-.comment_person {
-}
 
 /* Our latest articles  */
-.article_site {
+.articles-site__section {
   width: 100%;
   display: flex;
   flex-direction: column;
   padding: 5em 0;
 }
-.title_latest_box {
+.published-articles_titleBox {
   text-align: center;
   align-self: center;
   margin-bottom: 3rem;
 }
-.title_latest_article {
-}
-.caption_article {
+
+.caption-miniTitle {
   font-size: 20px;
   line-height: 1.8rem;
 }
 /* boxes */
-.container_article {
+.articles-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.article_box {
+.article-box {
   width: 25rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
-.article_img {
+.article-cover {
   width: 25rem;
   border-radius: 0.3rem;
 }
-.article_info {
+.article-info {
   display: flex;
   justify-content: space-between;
   text-align: center;
   align-items: center;
 }
-.name_article {
+.name-article {
 }
-.author_article {
+.author-article {
   font-size: 17px;
 }
 
-.click_study {
+.click-study__btn {
   text-decoration: none;
   color: aliceblue;
   text-decoration: none;
@@ -961,21 +949,21 @@ template {
   margin-left: auto;
   padding-top: 3rem;
 }
-.footer_top {
+.footer-top__section {
   display: flex;
   flex-direction: column;
   background-color: #1aa353;
   justify-content: space-between;
 }
-.title_top_footer {
+.miniTitle-footer {
   text-align: center;
   margin-top: 7rem;
 }
-.title_bottom_footer {
+.biggestTitle-footer {
   text-align: center;
   margin-bottom: 2rem;
 }
-.support_footer_ul {
+.support-ul {
   position: relative;
   display: flex;
   width: 100%;
@@ -985,7 +973,7 @@ template {
   justify-content: space-around;
   list-style-type: none;
 }
-.li_support_footer {
+.support-li {
   display: flex;
   align-items: center;
   width: 17rem;
@@ -993,13 +981,13 @@ template {
   background-color: #b3be13;
 }
 
-.text_support__wrapper {
+.support-wrapper {
   display: flex;
   justify-content: left;
   flex-direction: column;
   margin-left: 0.5rem;
 }
-.title_support {
+.title-support {
   position: relative;
   top: 1.3rem;
   color: #222931;
@@ -1009,7 +997,7 @@ template {
   line-height: 1.1em;
   letter-spacing: 0px;
 }
-.text_support {
+.text-support {
   position: relative;
   bottom: 1.3rem;
   color: #222931;
@@ -1195,26 +1183,26 @@ template {
     width: 20%;
     height: 4.5rem;
   }
-  .caption_warranty_container {
+  .caption-warranty_wrapper {
     width: 50%;
     margin-top: 1rem;
   }
 
-  .support_footer_ul {
+  .support-ul {
     top: 2.5rem;
   }
-  .text_support__wrapper {
+  .support-wrapper {
     margin-left: 0.5rem;
   }
-  .li_support_footer {
+  .support-li {
     width: 12rem;
     height: 5rem;
   }
-  .text_support {
+  .text-support {
     font-size: 12px;
     margin-top: 1.7rem;
   }
-  .title_support {
+  .title-support {
     font-size: 18px;
   }
   .info_about_li {
@@ -1333,49 +1321,49 @@ template {
     font-size: 1.5rem;
   }
 
-  .caption_warranty_container {
+  .caption-warranty_wrapper {
     margin-top: 0;
     width: 60%;
   }
-  .warranty_title {
+  .title-warranty {
     font-size: 1.5rem;
   }
-  .caption_warranty {
+  .caption-warranty {
     text-shadow: 0 1px 3px rgb(0, 0, 0); /* سایه ملایم برای متن */
     font-size: 17px;
   }
-  .see_more_warranty__btn,
-  .see_more_warranty__btn_ {
+  .warranty-btn,
+  .warranty-btn2 {
     padding: 0.8rem 2rem;
   }
 
-  .article_box {
+  .article-box {
     width: 20rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
-  .article_img {
+  .article-cover {
     width: 20rem;
   }
-  .click_study {
+  .click-study__btn {
     padding: 0.7rem 1rem;
   }
 
-  .support_footer_ul {
+  .support-ul {
     top: 2.5rem;
   }
-  .text_support__wrapper {
+  .support-wrapper {
     margin-left: -0.5rem;
   }
-  .li_support_footer {
+  .support-li {
     width: 11rem;
     height: 5rem;
   }
-  .text_support {
+  .text-support {
     font-size: 12px;
     margin-top: 1.7rem;
   }
-  .title_support {
+  .title-support {
     font-size: 18px;
   }
 
@@ -1489,22 +1477,21 @@ template {
     width: 100%;
     height: 27rem;
   }
-  .warranty_title {
+
+  .title-warranty {
     font-size: 2rem;
+    padding: 1rem;
   }
-  .caption_warranty {
+  .caption-warranty {
     text-shadow: 0 1px 3px rgb(0, 0, 0); /* سایه ملایم برای متن */
     font-size: 1.1rem;
   }
-  .warranty_title {
-    padding: 1rem;
-  }
-  .caption_warranty {
+  .caption-warranty {
     padding: 1rem;
     margin-bottom: 5rem;
   }
 
-  .caption_warranty_container {
+  .caption-warranty_wrapper {
     position: relative;
     background-color: #000;
     width: 100%;
@@ -1517,73 +1504,73 @@ template {
     align-content: center;
   }
 
-  .warranty_container {
+  .warranty-section {
     display: block;
   }
 
-  .see_more_warranty__btn,
-  .see_more_warranty__btn_ {
+  .warranty-btn,
+  .warranty-btn2 {
     position: absolute;
     bottom: 1rem;
     width: 5rem;
     margin-bottom: 1rem;
   }
 
-  .see_more_warranty__btn {
+  .warranty-btn {
     left: 0.5rem;
   }
 
-  .see_more_warranty__btn_ {
+  .warranty-btn2 {
     right: 0.5rem;
   }
 
-  .console_box {
+  .console-box {
     text-align: center;
     width: 18rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
-  .console_cover {
+  .console-img__box {
     width: 18em;
     height: 37rem;
   }
 
-  .article_box {
+  .article-box {
     width: 27rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
     margin-bottom: 1rem;
   }
-  .article_img {
+  .article-cover {
     width: 27rem;
   }
-  .click_study {
+  .click-study__btn {
     padding: 0.7rem 1rem;
   }
 
-  .support_footer_ul {
+  .support-ul {
     flex-wrap: wrap;
     top: 6.5rem;
   }
 
-  .title_bottom_footer {
+  .biggestTitle-footer {
     margin-bottom: 0;
   }
-  .li_support_footer {
+  .support-li {
     width: 11rem;
     height: 5rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
     margin-bottom: 1rem;
   }
-  .text_support__wrapper {
+  .support-wrapper {
     margin-left: -0.5rem;
   }
-  .text_support {
+  .text-support {
     font-size: 12px;
     margin-top: 1.7rem;
   }
-  .title_support {
+  .title-support {
     font-size: 18px;
   }
 
@@ -1664,30 +1651,30 @@ template {
     height: 18rem;
   }
 
-  .console_box {
+  .console-box {
     text-align: center;
     width: 19rem;
     margin-left: 0rem;
   }
-  .console_cover {
+  .console-img__box {
     width: 19rem;
     height: 38rem;
   }
 
-  .see_more_warranty__btn,
-  .see_more_warranty__btn_ {
+  .warranty-btn,
+  .warranty-btn2 {
     padding: 1rem 1rem;
   }
 
-  .article_box {
+  .articles-wrapper {
     width: 100%;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
-  .article_img {
+  .article-cover {
     width: 100%;
   }
-  .click_study {
+  .click-study__btn {
     padding: 0.7rem 1rem;
   }
 
